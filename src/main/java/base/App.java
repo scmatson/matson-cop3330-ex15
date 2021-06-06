@@ -33,5 +33,24 @@ Challenges
 encrypt the password using Bcrypt and compare it with the value in your map.
  */
 
+import java.util.Scanner;
+
 public class App {
+    public static void main(String[] args) {
+        Scanner ui = new Scanner (System.in);
+
+        System.out.print("What is the password? ");
+        String attempt = ui.nextLine();
+
+        String user_pass = "abc$123";
+
+        if(attempt.equals(user_pass))
+        {
+            System.out.println("Welcome!");
+        }
+        else
+        {
+            System.out.println("I don't know you.");
+        }
+    }
 }
